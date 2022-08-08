@@ -1,4 +1,4 @@
-TRANSPORT,Time,Origin,Destination,Speed
+TRANSPORT,Time,Orig,Dest,Speed
 CARGO_15100,1859-11-25 10:16:40,Steamdrift,Rustport,74.09
 CARGO_15101,1859-11-26 03:58:07,Rustport,Irondale,73.6
 CARGO_15101,1859-11-26 13:02:07,Irondale,Leverstorm,69.37

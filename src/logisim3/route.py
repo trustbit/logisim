@@ -16,8 +16,8 @@ def route(speed_model: SpeedModel, origin: str, dest: str):
     map_file = Path(__file__).parent / "map.csv"
     df = pd.read_csv(map_file)
     for _, r in df.iterrows():
-        MAP[r.Origin].append((r.Destination, r.Distance))
-        MAP[r.Destination].append((r.Origin, r.Distance))
+        MAP[r.Orig].append((r.Dest, r.Km))
+        MAP[r.Dest].append((r.Orig, r.Km))
 
     # list of our visited locations
     visited = []
