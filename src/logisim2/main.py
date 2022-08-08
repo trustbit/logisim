@@ -4,7 +4,7 @@ from collections import defaultdict
 import fire
 
 
-def route(start: str = "Steamdrift", end: str = "Leverstorm"):
+def route(origin: str = "Steamdrift", dest: str = "Leverstorm"):
     """
     builds a shortest route from start to end
 
@@ -54,7 +54,7 @@ def route(start: str = "Steamdrift", end: str = "Leverstorm"):
 
     # this is our start location
     # travel tree will grow from here
-    travels.put((0, start, None))
+    travels.put((0, origin, None))
 
     while not travels.empty():
         trip = travels.get()
@@ -62,7 +62,7 @@ def route(start: str = "Steamdrift", end: str = "Leverstorm"):
         if location in visited:
             continue
 
-        if location == end:
+        if location == dest:
             # we arrived. Let's reverse the trip history to print it
             path = [(clock, location)]
             while parent:
