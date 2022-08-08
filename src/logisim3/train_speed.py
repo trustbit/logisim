@@ -25,9 +25,6 @@ def segment(r) -> str:
 
 def departure(r) -> float:
     arrival = r.Time
-    speed = r.Speed
-    km = r.Km
-
     travel = r.Km / r.Speed
 
     departure = (arrival - pd.Timedelta(hours=travel)).time()
